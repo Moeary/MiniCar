@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "DevEco",
+            "compilerPath": "D:/Programs/mingW/bin/gcc.exe",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "${workspaceFolder}/**"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}

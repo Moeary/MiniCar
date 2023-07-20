@@ -1,0 +1,45 @@
+# Copyright (c) 2020 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+static_library("car_mqtt") {
+    sources = [
+        "src/car_main.c",
+        "src/KeyEvent.c",
+        "src/car_control.c",
+        "src/wifi_connecter.c",
+        
+
+    ]
+
+    include_dirs = [
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/components/cmsis/2.0",
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        "//applications/sample/wifi-iot/app/car_mqtt-master/include",
+        "//device/hisilicon/hispark_pegasus/sdk_liteos/include",
+        "//foundation/communication/wifi_lite/interfaces/wifiservice",
+        "//device/hisilicon/hispark_pegasus/sdk_liteos/third_party/lwip_sack/include",     
+        "//third_party/pahomqtt:pahomqtt_static",
+        "//third_party/pahomqtt/MQTTPacket/src",
+        "//third_party/pahomqtt/MQTTClient-C/src",
+        "//third_party/cJSON",
+
+        "//applications/sample/wifi-iot/app/car_mqtt-master/src/trace/robot_demo/ssd1306",
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/kal/cmsis",
+        "//base/iot_hardware/peripheral/interfaces/kits",
+    ]
+
+    deps = [
+        "//third_party/pahomqtt:pahomqtt_static",
+    ]
+}
